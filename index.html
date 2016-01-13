@@ -19,7 +19,7 @@
             <h1>德国博士申请咨询</h1>
             <p>提供1对1的德国博士申请信息</p>
             <br><br><br>
-            <p><a class="btn btn-warning btn-lg" href="#" role="button">我要咨询 &raquo;</a></p>
+            <p><a class="btn btn-warning btn-lg" href="#contact" role="button">我要咨询 &raquo;</a></p>
         </center>
     </div>
 </div>
@@ -236,7 +236,7 @@
     <br>
     <br>
     <br>
-    <div class="row">
+    <div class="row" id="contact">
         <div class="col-md-4">
 
         </div>
@@ -249,7 +249,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" >
         <br/><br/><br/>
 
         <!-- Plans -->
@@ -271,7 +271,7 @@
                                 <li class="list-group-item"><i class="fa fa-check"></i> 申请流程介绍</li>
                             </ul>
                             <div class="panel-footer">
-                                <a class="btn btn-lg btn-block btn-info" href="#">马上咨询</a>
+                                <a class="btn btn-lg btn-block btn-info" href="#" data-toggle="modal" data-target="#myModal">马上咨询</a>
                             </div>
                         </div>
                     </div>
@@ -293,7 +293,7 @@
                                 <li class="list-group-item"><i class="fa fa-check"></i> 简历优化</li>
                             </ul>
                             <div class="panel-footer">
-                                <a class="btn btn-lg btn-block btn-warning" href="#">马上咨询</a>
+                                <a class="btn btn-lg btn-block btn-warning" href="#" data-toggle="modal" data-target="#myModal">马上咨询</a>
                             </div>
                         </div>
                     </div>
@@ -319,7 +319,7 @@
                                 <li class="list-group-item"><i class="fa fa-check"></i> 1天之内回信保证</li>
                             </ul>
                             <div class="panel-footer">
-                                <a class="btn btn-lg btn-block btn-success" href="#">马上咨询</a>
+                                <a class="btn btn-lg btn-block btn-success" href="#" data-toggle="modal" data-target="#myModal">马上咨询</a>
                             </div>
                         </div>
                     </div>
@@ -332,6 +332,58 @@
     </div>
     <hr>
 </div> <!-- /container -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">与我联系</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <center>
+                            微信二维码<br>
+                            <img src="img/qrcode.jpg" width="80%">
+                        </center>
+                    </div>
+                    <div class="col-md-6">
+                        <center>
+                            Email<br>
+                            <img src="img/gmail.png">
+                        </center>
+
+                    </div>
+                </div>
+                <br>
+                <h4>支付方式</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <center>
+                            支付宝<br><img src="img/alipay.jpg" class="unilogo">
+                        </center>
+                    </div>
+                    <div class="col-md-4">
+                        <center>
+                            微信支付<br><img src="img/wechat.jpg" class="unilogo">
+                        </center>
+                    </div>
+                    <div class="col-md-4">
+                        <center>
+                            Paypal<br><img src="img/paypal.jpg" class="unilogo">
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="jumbotron" style="background-position: top; height: 30vh;">
     <div class="container">

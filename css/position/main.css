@@ -1,0 +1,119 @@
+.icon {
+    font-size: 22px;
+}
+
+.statusbar-overlay {
+    background: transparent !important;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.embrass-tip {
+    padding: 20px;
+}
+
+.filter-bar {
+    margin: 0;
+    background-color: #738ABB;
+    color: white;
+    font-size: 14px;
+}
+
+.filter-bar ul {
+    background: none;
+}
+
+.filter-icon {
+    border: none;
+    color: white;
+    display: inline;
+    vertical-align: middle;
+    position: absolute;
+    right: 10px;
+    top: -26px;
+    font-size: 20px;
+}
+
+.filter-icon .fa-stack {
+    position: static;
+    width: 2em;
+    height: 2em;
+    line-height: inherit;
+    vertical-align: middle;
+    display: inline !important;
+}
+
+.filter-icon .fa-stack .subscript {
+    right: -5px;
+    bottom: -5px;
+    position: relative;
+    font-size: 15px;
+}
+
+.smart-select-page .list-block {
+    margin: 0;
+}
+
+.smart-select-page .navbar {
+    height: 0;
+}
+
+.popup-detail .content-block {
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.popup-detail .tag-cloud {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.popup-detail .detail-title {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.popup-detail .detail-uni {
+    font-size: medium;
+}
+
+.popup-detail .content-block.inset {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    overflow: hidden;
+    max-width: 100vw;
+    word-wrap: break-word;
+}
+
+.popup-detail .uni-logo {
+    max-width: 64px;
+    width: 64px;
+    position: static;
+}
+
+.popup-detail .card-header {
+    border-radius: 2px 2px 0 0;
+    font-size: 15px;
+}
+
+.popup-detail .card {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+
+.popover {
+    max-width: 60%;
+}
+
+.modal-button {
+    color: #738ABB;
+}

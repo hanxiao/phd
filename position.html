@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Fav and touch icons -->
+    <link rel="icon" type="image/png" href="img/logo-64x64.png"/>
+    <link rel="shortcut icon" href="img/logo-64x64.png">
+    <title lang="zh">找德到 - 最全最新的德国大学研究所职位</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/position/tabbar.css">
+    <link rel="stylesheet" href="css/position/general.css">
+    <link rel="stylesheet" href="css/position/list.css">
+    <link rel="stylesheet" href="css/position/main.css">
+    <link rel="stylesheet" href="css/position/invest.css">
+    <link rel="stylesheet" href="css/position/tutorial.css">
+</head>
+<body>
+
+<div class="views">
+    <div class="view view-main layout-white">
+        <div class="pages navbar-through">
+            <div v-if="focusPosition" class="page toolbar-fixed navbar-fixed">
+                <div class="page-content" id="detail-content">
+                    <div class="content-block">
+                        <p class="detail-title">{{focusPosition.disTitle}}</p>
+                    </div>
+                    <div class="content-block">
+                        <div class="uni-logo">
+                            <img :src="'img/logo/'+ focusPosition.instituteId +'.png'"
+                                 style="max-width:100%; max-height:100%;"
+                                 onerror="imgErrorHide(this)" onload="imgLoadShow(this)">
+                        </div>
+                        <p class="detail-uni">{{focusPosition.disInstitute}}</p>
+                        <ul class="tag-cloud">
+                            <li v-for="tag in focusPosition.tags">{{transTag(tag)}}</li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <p class="detail-date">
+                            发表于{{renderVal(focusPosition.publishTime,'date')}} 在
+                            {{renderVal(focusPosition.publishTime,'fulldate')}}</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="list-block">
+                                <ul>
+                                    <li v-for="link in focusLinks">
+                                        <a v-bind:href="link" target="_blank" class="item-link item-content external">
+                                            <div class="item-media">
+                                                <i v-if="link.indexOf('mailto') !== -1" class="fa fa-envelope-o fa-fw"
+                                                   aria-hidden="true"></i>
+                                                <i v-else class="fa fa-link fa-fw" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">{{removeMailto(link)}}</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a v-bind:href="focusSearch" target="_blank"
+                                           class="item-link item-content external">
+                                            <div class="item-media">
+                                                <i class="fa fa-search fa-fw" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">在网上搜索这个职位信息</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a v-bind:href="focusWiki" target="_blank"
+                                           class="item-link item-content external">
+                                            <div class="item-media">
+                                                <i class="fa fa-wikipedia-w fa-w" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">维基百科上的{{focusPosition.institute}}</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://phd.ojins.com" target="_blank" class="item-link item-content">
+                                            <div class="item-media">
+                                                <i class="fa fa-wechat fa-fw" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">微信一对一咨询</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-block">
+                        <div align="center">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- inside-phdapp-detailpage -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:320px;height:100px"
+                                 data-ad-client="ca-pub-5408889511302651"
+                                 data-ad-slot="8872926327"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                    </div>
+                    <div v-if="focusHtml.trim().length>0" class="content-block inset">
+                        <div class="content-block-inner">
+                            <p class="detail-main">{{{richHtml}}}</p>
+                        </div>
+                    </div>
+                    <div v-else>
+                        <div class="embrass-tip">
+                            <center>
+                                <i class="fa fa-meh-o" aria-hidden="true"></i>
+                                呃...有关这个职位的信息神奇的消失了
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="lib/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="lib/js/moment.js"></script>
+<script type="text/javascript" src="lib/js/vue.js"></script>
+<script type="text/javascript" src="lib/js/inobounce.js"></script>
+<script type="text/javascript" src="lib/js/in-view.min.js"></script>
+<script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+<script type="text/javascript" src="lib/js/vue-infinite-loading.js"></script>
+</body>
+</html>

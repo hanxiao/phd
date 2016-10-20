@@ -1,0 +1,156 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100vw;
+    height: 70vh;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color:#748ab9;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#title {
+    font-size: 20px;
+    text-align: center;
+    background-color: #748ab9;
+    padding: 0;
+    color: #FFF;
+    line-height: 3;
+    font-weight: bold;
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    background-image: url("../img/arrow-right.svg");
+    right: 10px;
+    left: auto;
+}
+
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-prev {
+    background-image: url("../img/arrow-left.svg");
+    left: 10px;
+    right: auto;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #FFF;
+}
+
+#download-app {
+    margin-top: 5vh;
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+}
+
+#download-google {
+    margin-top: 5vh;
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+}
+
+#download-apk {
+    margin-top: 5vh;
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+    background-image: url("../img/download-apk.png");
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:20px;   /* Height of the footer */
+    text-align: center;
+}
+
+
+select {
+    position: relative;
+    border: 1px solid #51ae7d;
+    border-radius:8px;
+    color: black;
+    padding: 5px;
+    padding-left: 40px;
+    -webkit-appearance: none;
+    background:url("../img/globe.svg") left no-repeat;
+    background-transparency: 0.5;
+    background-position: left;
+    background-size: 18px 18px;
+}
+select:active {
+    border: 1px solid #000;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+.notif {
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px );
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    padding: 5px 10px;
+    box-shadow:	inset 0 1px 0 rgba(255,255,255,0.5);
+    border: 1px solid;
+    margin: 10px 0;
+}
+.info {
+    background-color: #6af;
+    border-color: #48d;
+}
+.warning{
+    background-color: #fa4;
+    border-color: #d82;
+}
+.success{
+    background-color: #8d5;
+    border-color: #6b3;
+}
+.error {
+    background-color: #f31;
+    border-color: #d10;
+}

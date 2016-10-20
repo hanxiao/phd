@@ -178,7 +178,6 @@ function showDetails() {
         },
         ready: function () {
             myApp.hideIndicator();
-            $('.views').css('visibility','visible').hide().fadeIn();
         },
         methods: {
             checkWechat: function () {

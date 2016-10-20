@@ -125,20 +125,24 @@
     margin-right: 10px;
     margin-top: 0;
     margin-bottom: 0;
+    overflow: hidden;
 }
 
 #all-positions .tag-cloud {
     display: inline-block;
     font-size: 15px;
+    overflow: hidden;
 }
 
 #all-positions .detail-title {
     font-size: x-large;
     font-weight: bold;
+    overflow: hidden;
 }
 
 #all-positions .detail-uni {
     font-size: medium;
+    overflow: hidden;
 }
 
 #all-positions .content-block.inset {
@@ -172,6 +176,7 @@
 
 body {
     background-color: rgb(241, 241, 241) !important;
+    overflow: hidden;
 }
 
 .layout-white .list-block ul, .list-block.layout-white ul {

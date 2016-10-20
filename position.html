@@ -24,21 +24,20 @@
 </head>
 <body>
 
-<div class="views">
+<div class="views" id="all-positions" style="visibility: hidden">
     <div class="view view-main layout-white">
         <div class="pages navbar-through">
             <div v-if="focusPosition" class="page toolbar-fixed navbar-fixed">
                 <div class="page-content" id="detail-content">
                     <div class="content-block">
-                        <p class="detail-title">{{focusPosition.disTitle}}</p>
+                        <p class="detail-title">{{focusPosition.title}}</p>
                     </div>
                     <div class="content-block">
                         <div class="uni-logo">
-                            <img :src="'img/logo/'+ focusPosition.instituteId +'.png'"
-                                 style="max-width:100%; max-height:100%;"
-                                 onerror="imgErrorHide(this)" onload="imgLoadShow(this)">
+                            <img :src="'http://home.in.tum.de/~xiaoh/thumbnail/'+ focusPosition.instituteId +'.png'"
+                                 style="max-width:100%; max-height:100%;">
                         </div>
-                        <p class="detail-uni">{{focusPosition.disInstitute}}</p>
+                        <p class="detail-uni">{{focusPosition.institute}}</p>
                         <ul class="tag-cloud">
                             <li v-for="tag in focusPosition.tags">{{transTag(tag)}}</li>
                         </ul>
@@ -87,7 +86,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://phd.ojins.com" target="_blank" class="item-link item-content">
+                                        <a href="http://phd.ojins.com" target="_blank" class="item-link item-content external">
                                             <div class="item-media">
                                                 <i class="fa fa-wechat fa-fw" aria-hidden="true"></i>
                                             </div>
@@ -136,10 +135,13 @@
 
 <script type="text/javascript" src="lib/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="lib/js/moment.js"></script>
+<script type="text/javascript" src="lib/js/jsonselect.js"></script>
 <script type="text/javascript" src="lib/js/vue.js"></script>
 <script type="text/javascript" src="lib/js/inobounce.js"></script>
 <script type="text/javascript" src="lib/js/in-view.min.js"></script>
 <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-<script type="text/javascript" src="lib/js/vue-infinite-loading.js"></script>
+<script type="text/javascript" src="lib/js/lz-string.min.js"></script>
+
+<script type="text/javascript" src="js/position.js"></script>
 </body>
 </html>

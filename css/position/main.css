@@ -117,3 +117,63 @@
 .modal-button {
     color: #738ABB;
 }
+
+
+#all-positions .content-block {
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#all-positions .tag-cloud {
+    display: inline-block;
+    font-size: 15px;
+}
+
+#all-positions .detail-title {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#all-positions .detail-uni {
+    font-size: medium;
+}
+
+#all-positions .content-block.inset {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    overflow: hidden;
+    max-width: 100vw;
+    word-wrap: break-word;
+}
+
+#all-positions .uni-logo {
+    max-width: 64px;
+    width: 64px;
+    position: static;
+}
+
+#all-positions .card-header {
+    border-radius: 2px 2px 0 0;
+    font-size: 15px;
+}
+
+#all-positions .card {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+
+
+.page {
+    background-color: rgb(241, 241, 241) !important;
+}
+
+body {
+    background-color: rgb(241, 241, 241) !important;
+}
+
+.layout-white .list-block ul, .list-block.layout-white ul {
+    border-radius: 10px;
+}

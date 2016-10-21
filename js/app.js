@@ -46,7 +46,6 @@ function init() {
 function showWechatWarn() {
     if (isWeixinBrowser()) {
         alert("由于微信不支持打开指向App Store和Google Play的链接，请点击右上角并选择“从Safari/浏览器中打开”，再进行下载安装。");
-        $('.notif').show();
     }
 }
 

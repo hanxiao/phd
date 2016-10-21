@@ -39,6 +39,11 @@ function switchLanguage() {
 function init() {
 
     switchLanguage();
+    showWechatWarn();
+
+}
+
+function showWechatWarn() {
     if (isWeixinBrowser()) {
         alert("由于微信不支持打开指向App Store和Google Play的链接，请点击右上角并选择“从Safari/浏览器中打开”，再进行下载安装。");
         $('.notif').show();
@@ -46,6 +51,7 @@ function init() {
 }
 
 function goAppStore() {
+    showWechatWarn();
     var a = document.createElement('a');
     a.setAttribute("href", 'https://itunes.apple.com/us/app/zhao-dao-zui-quan-zui-xin/id1166618336?ls=1&mt=8');
     a.setAttribute("target", "_blank");
@@ -53,6 +59,7 @@ function goAppStore() {
 }
 
 function goAndroidStore() {
+    showWechatWarn();
     var a = document.createElement('a');
     a.setAttribute("href", 'https://play.google.com/store/apps/details?id=de.ojins.phd');
     a.setAttribute("target", "_blank");
@@ -60,6 +67,7 @@ function goAndroidStore() {
 }
 
 function goApkStore() {
+    showWechatWarn();
     var a = document.createElement('a');
     a.setAttribute("href", 'release/zhaodedao-1.0.apk');
     a.setAttribute("target", "_blank");

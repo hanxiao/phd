@@ -37,12 +37,12 @@ body {
 }
 
 #title {
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     background-color: #748ab9;
-    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: #FFF;
-    line-height: 3;
     font-weight: bold;
 }
 
@@ -65,7 +65,8 @@ body {
 }
 
 #download-app {
-    margin-top: 5vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100vw;
     height: 10vh;
     position: relative;
@@ -76,7 +77,8 @@ body {
 }
 
 #download-google {
-    margin-top: 5vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100vw;
     height: 10vh;
     position: relative;
@@ -87,7 +89,8 @@ body {
 }
 
 #download-apk {
-    margin-top: 5vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100vw;
     height: 10vh;
     position: relative;

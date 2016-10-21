@@ -47,21 +47,21 @@ function init() {
 
 function goAppStore() {
     var a = document.createElement('a');
-    a.setAttribute("href", 'https://itunes.apple.com/us/app/ou-jin-suo-ou-zhou-jin-rong/id1058576343?ls=1&mt=8');
+    a.setAttribute("href", 'https://itunes.apple.com/us/app/zhao-dao-zui-quan-zui-xin/id1166618336?ls=1&mt=8');
     a.setAttribute("target", "_blank");
     fireClick(a);
 }
 
 function goAndroidStore() {
     var a = document.createElement('a');
-    a.setAttribute("href", 'https://play.google.com/store/apps/details?id=com.ojins.news');
+    a.setAttribute("href", 'https://play.google.com/store/apps/details?id=de.ojins.phd');
     a.setAttribute("target", "_blank");
     fireClick(a);
 }
 
 function goApkStore() {
     var a = document.createElement('a');
-    a.setAttribute("href", 'release/ojins-news.apk');
+    a.setAttribute("href", 'release/zhaodedao-1.0.apk');
     a.setAttribute("target", "_blank");
     fireClick(a);
 }

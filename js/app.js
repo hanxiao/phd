@@ -68,7 +68,7 @@ function goAndroidStore() {
 function goApkStore() {
     showWechatWarn();
     var a = document.createElement('a');
-    a.setAttribute("href", 'release/zhaodedao-1.0.apk');
+    a.setAttribute("href", 'release/zhaodedao-arm7-1.2.apk');
     a.setAttribute("target", "_blank");
     fireClick(a);
 }

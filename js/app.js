@@ -68,7 +68,7 @@ function goAndroidStore() {
 function goApkStore() {
     showWechatWarn();
     var a = document.createElement('a');
-    a.setAttribute("href", 'release/zhaodedao-arm7-1.2.apk');
+    a.setAttribute("href", 'https://github.com/hanxiao/phb/releases/download/1.0/zhaodedao-armv7-1.1.apk');
     a.setAttribute("target", "_blank");
     fireClick(a);
 }

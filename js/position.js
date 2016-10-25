@@ -161,7 +161,7 @@ var mainView = myApp.addView('.view-main', {
 
 moment.locale('zh-cn');
 
-var dataUrl = 'http://ojins.com/data/phd/database/compressed/segment-' + Math.abs(QueryString.id % 50) + '.json.lz';
+var dataUrl = 'http://ojins.com/data/phd/database/uncompressed/segment-' + Math.abs(QueryString.id % 50) + '.json';
 
 
 console.log(QueryString.id +' will redirect to '+ dataUrl);
@@ -308,10 +308,10 @@ function loadCompressedData(filename, id) {
     //    title: '正在请求更新...',
     //    media: '<i class="fa fa-refresh"></i>',
     //});
-    $.get(filename, function() {
+    $.getJSON(filename, function() {
             console.log( "fetching data..." );})
         .done(function(data) {
-            allData =  JSON.parse(LZString.decompressFromEncodedURIComponent(data));
+            allData =  data;
             curId = id;
             showDetails();
         })

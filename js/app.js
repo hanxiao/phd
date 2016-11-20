@@ -57,10 +57,10 @@ function goAppStore() {
     fireClick(a);
 }
 
-function goAndroidStore() {
+function goStore(url) {
     showWechatWarn();
     var a = document.createElement('a');
-    a.setAttribute("href", 'https://play.google.com/store/apps/details?id=de.ojins.phd');
+    a.setAttribute("href", url);
     a.setAttribute("target", "_blank");
     fireClick(a);
 }

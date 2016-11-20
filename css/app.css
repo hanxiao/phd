@@ -88,6 +88,32 @@ body {
     display: block;
 }
 
+#download-xiaomi {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+    background-image: url("../img/xiaomi-applogo.png");
+}
+
+#download-wandoujia {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+    background-image: url("../img/wandoujia.png");
+}
+
 #download-apk {
     margin-top: 10px;
     margin-bottom: 10px;
